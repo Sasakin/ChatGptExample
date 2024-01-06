@@ -46,6 +46,11 @@ app.get('/', async (req, res) => {
     getData(res);
 });
 
+// Обработка GET-запроса на страницу чата
+app.get('/chat', (req, res) => {
+    res.render('chat'); // отображение страницы chat.ejs
+});
+
 app.use((req, res) => {
     res.status(404).send('404 Not Found');
 });

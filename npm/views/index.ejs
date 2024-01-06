@@ -16,6 +16,7 @@
         <a href="/">Главная</a>
         <a href="/about">О нас</a>
         <a href="/contact">Контакты</a>
+        <a href="/chat">Чат</a>
     </nav>
 </header>
 
@@ -69,22 +70,52 @@
                 <th>Цена</th>
             </tr>
             </thead>
-            <tbody>
-            <tr>
-                <td>Bitcoin</td>
-                <td>$50,000</td>
-            </tr>
-            <tr>
-                <td>Ethereum</td>
-                <td>$3,500</td>
-            </tr>
-            <tr>
-                <td>Litecoin</td>
-                <td>$150</td>
-            </tr>
+            <tbody id="prices">
             </tbody>
         </table>
     </section>
+    <script>
+        // Запросить символы с Bybit
+        axios.get('https://api.bybit.com/v2/public/symbols')
+            .then(response => {
+                // Получить все символы
+                const symbols = response.data.result;
+
+                // Создать строки таблицы для каждого символа
+                const tableRows = symbols.map(symbol => {
+                    return `
+          <tr>
+            <td>${symbol.name}</td>
+            <td>загрузка...</td>
+          </tr>
+        `;
+                });
+
+                // Вставить строки таблицы в tbody
+                document.getElementById('prices').innerHTML = tableRows.join('');
+
+                // Запросить данные о ценах для каждого символа
+                symbols.forEach((symbol, index) => {
+                    axios.get('https://api.bybit.com/v2/public/tickers', {
+                        params: {
+                            symbol: symbol.name
+                        }
+                    })
+                        .then(response => {
+                            // Обновить цену для соответствующего символа
+                            const price = response.data.result[0].last_price;
+                            document.getElementById('prices').rows[index].cells[1].innerText = `$${price}`;
+                        })
+                        .catch(error => {
+                            console.error(error);
+                        });
+                });
+
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
 
     <section>
         <h2>Калькулятор</h2>
