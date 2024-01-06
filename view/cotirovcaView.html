@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+    <title>График цены на биткоин</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Подключение стилей и скриптов для Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div id="chartContainer">
+    <canvas id="chart"></canvas>
+</div>
+<div>
+    <label for="period">Период:</label>
+    <select id="period">
+        <option value="m1">1 мин</option>
+        <option value="m5">5 мин</option>
+        <option value="m15">15 мин</option>
+        <option value="m30">30 мин</option>
+        <option value="h1">1 час</option>
+        <option value="h2">2 час</option>
+        <option value="d1">1 день</option>
+    </select>
+    <label for="quote">Котировка:</label>
+    <select id="quote">
+        <option value="USD">BTC/USD</option>
+        <option value="EUR">BTC/EUR</option>
+        <option value="GBP">BTC/GBP</option>
+    </select>
+</div>
+
+<script>
+    // Функция для получения данных о котировках с использованием API
+    async function getChartData(period, quote) {
+        try {
+            const response = await fetch(`https://api.coincap.io/v2/assets/bitcoin/history?interval=${period}&quote=${quote}`);
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error(error);
+            throw new Error('Ошибка при получении данных о котировках');
+        }
+    }
+
+    // Функция для отображения графика с использованием Chart.js
+    function displayChart(data) {
+        const chartData = {
+            labels: data.data.map(entry => entry.date),
+            datasets: [{
+                label: 'Price',
+                data: data.data.map(entry => entry.priceUsd),
+                borderColor: 'rgb(75, 192, 192)',
+                fill: false
+            }]
+        };
+
+        const ctx = document.getElementById('chart').getContext('2d');
+        return new Chart(ctx, {
+            type: 'line',
+            data: chartData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false
+            }
+        });
+    }
+
+    // Обработчик изменения периода графика
+    document.getElementById('period').addEventListener('change', async function() {
+        const period = this.value;
+        const quote = document.getElementById('quote').value;
+
+        const chartData = await getChartData(period, quote);
+        displayChart(chartData);
+    });
+
+    // Обработчик изменения котировки графика
+    document.getElementById('quote').addEventListener('change', async function() {
+        const period = document.getElementById('period').value;
+        const quote = this.value;
+
+        const chartData = await getChartData(period, quote);
+        displayChart(chartData);
+    });
+
+    // Инициализация графика при загрузке страницы
+    const initialPeriod = document.getElementById('period').value;
+    const initialQuote = document.getElementById('quote').value;
+    getChartData(initialPeriod, initialQuote)
+        .then(displayChart);
+</script>
+</body>
+</html>

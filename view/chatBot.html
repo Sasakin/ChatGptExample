@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<head>
+    <title>Сайт с чатом</title>
+    <style>
+        /* Стили для основного макета */
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .chat-list {
+            width: 25%;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        /* Добавляем стили для подсветки выбранного элемента и смены курсора */
+        .chat-list li {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .chat-list li:hover {
+            background-color: #e6e6e6;
+        }
+
+        .chat-list li.selected {
+            background-color: #b3b3b3;
+            color: white;
+        }
+        .chat-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .input-field {
+            display: flex;
+            margin-top: 20px;
+        }
+        .input-field input {
+            flex-grow: 1;
+            padding: 10px;
+        }
+        .input-field button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="chat-list">
+        <h2>Список чатов</h2>
+        <ul id="chatList">
+            <!-- Здесь будут отображаться элементы списка чатов -->
+        </ul>
+    </div>
+    <div class="chat-content">
+        <h2>Центральная панель</h2>
+        <div class="chat-content" id="chatContent">
+            <!-- Здесь будет отображаться контент выбранного чата -->
+        </div>
+        <div class="response-panel" id="responsePanel" style="display: none;">
+            <!-- Здесь будет отображаться панель с ответом от сервера -->
+        </div>
+        <div class="input-field">
+            <input type="text" id="messageInput" placeholder="Введите сообщение">
+            <button id="sendButton">Отправить</button>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    // Пример кода JavaScript с использованием jQuery для взаимодействия с UI
+
+    // Пример данных о чатах (можно заменить на свои данные)
+    const chatData = [
+        { id: 1, name: "Чат 1" },
+        { id: 2, name: "Чат 2" },
+        { id: 3, name: "Чат 3" }
+    ];
+
+    // Функция для отображения списка чатов
+    function renderChatList() {
+        const chatList = $("#chatList");
+        chatList.empty(); // Очищаем список перед отображением
+
+        chatData.forEach((chat) => {
+            const listItem = $("<li>").text(chat.name);
+            listItem.on("click", () => {
+                // Обработчик клика по элементу списка чатов
+                // Можно добавить код для загрузки контента выбранного чата
+                $("#chatContent").text(`Выбран чат: ${chat.name}`);
+
+                // Добавляем класс "selected" к выбранному элементу
+                chatList.find("li").removeClass("selected");
+                listItem.addClass("selected");
+            });
+
+            chatList.append(listItem);
+        });
+    }
+
+    // Обработчик клика по кнопке отправки сообщения
+    $("#sendButton").on("click", () => {
+        const messageInput = $("#messageInput");
+        const message = messageInput.val();
+
+        // Отображение введенного текста на контент страницы
+        $("#chatContent").append(`<p>Вы: ${message}</p>`);
+
+        // Симуляция ответа от сервера
+        simulateServerResponse();
+
+        // Очистка поля ввода
+        messageInput.val("");
+    });
+
+    // Функция для симуляции ответа от сервера
+    function simulateServerResponse() {
+        // Случайный текст для ответа от сервера
+        const responses = [
+            "Сообщение получено. Спасибо!",
+            "Мы рассмотрим ваш запрос.",
+            "Извините, но у нас нет ответа на ваше сообщение.",
+            "Мы свяжемся с вами в ближайшее время."
+        ];
+        const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+
+        // Отображение панели с ответом от сервера
+        const responsePanel = $("#responsePanel");
+        responsePanel.text(randomResponse);
+        responsePanel.fadeIn();
+        setTimeout(() => {
+            responsePanel.fadeOut();
+        }, 3000);
+    }
+
+    // Отображаем список чатов при загрузке страницы
+    renderChatList();
+</script>
+</body>
+</html>

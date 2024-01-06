@@ -1,0 +1,101 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой сайт</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+</head>
+<body>
+<header>
+    <h1>Добро пожаловать на мой сайт!</h1>
+    <nav>
+        <a href="/">Главная</a>
+        <a href="/about">О нас</a>
+        <a href="/contact">Контакты</a>
+    </nav>
+</header>
+
+<main>
+    <section>
+        <h2>Новости</h2>
+        <p>Здесь будут отображаться последние новости.</p>
+    </section>
+
+    <section>
+        <h2>Графики</h2>
+        <canvas id="chart"></canvas>
+        <script>
+            const ctx = document.getElementById('chart').getContext('2d');
+            const objcts = {"a":"47688.311384487805","b":"49655.408073686604"}
+            const dates = <%= JSON.stringify(dates) %>
+            const prices = <%- JSON.stringify(prices) %>
+            const chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: dates,
+                    datasets: [{
+                        label: 'Bitcoin Price',
+                        data: prices,
+                        borderColor: 'rgb(255, 99, 132)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        xAxes: [{
+                            type: 'time',
+                        }]
+                    }
+                },
+            });
+        </script>
+    </section>
+
+    <section>
+        <h2>Таблица</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Название</th>
+                <th>Цена</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Bitcoin</td>
+                <td>$50,000</td>
+            </tr>
+            <tr>
+                <td>Ethereum</td>
+                <td>$3,500</td>
+            </tr>
+            <tr>
+                <td>Litecoin</td>
+                <td>$150</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Калькулятор</h2>
+        <form>
+            <label for="value1">Значение 1:</label>
+            <input type="number" id="value1">
+            <label for="value2">Значение 2:</label>
+            <input type="number" id="value2">
+            <button type="submit">Рассчитать</button>
+        </form>
+        <p>Результат: <span id="result"></span></p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Мой сайт. Все права защищены.</p>
+</footer>
+
+</body>
+</html>

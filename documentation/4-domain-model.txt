@@ -1,0 +1,107 @@
+@startuml
+
+class User {
+  - int UserId
+  - String Name
+  - String Email
+  - String Password
+}
+
+class Student {
+  - int StudentId
+  - List<Course> CoursesEnrolled
+}
+
+class Teacher {
+  - int TeacherId
+  - List<Course> CoursesTaught
+}
+
+class Course {
+  - int CourseId
+  - String Title
+  - String Description
+  - int TeacherId
+  - List<Student> StudentsEnrolled
+}
+
+class Material {
+  - int MaterialId
+  - int CourseId
+  - String Title
+  - String Content
+}
+
+class Assignment {
+  - int AssignmentId
+  - int CourseId
+  - String Title
+  - String Description
+  - Date Deadline
+}
+
+class Test {
+  - int TestId
+  - int CourseId
+  - String Title
+  - List<Question> Questions
+  - List<Result> Results
+}
+
+class Message {
+  - int MessageId
+  - int SenderId
+  - int ReceiverId
+  - String Content
+  - Date Timestamp
+}
+
+class Admin {
+  - int AdminId
+}
+
+class TechnicalIssue {
+  - int IssueId
+  - String Description
+  - String Status
+  - String AssignedTo
+}
+
+class Question {
+  - int QuestionId
+  - String Content
+  - Answer rightAnswer
+  - List<Answer> options
+}
+
+class Answer {
+  - int AnswerId
+  - String Content
+}
+
+class Result {
+  - int ResultId
+  - int TestId
+  - int StudentId
+  - int Score
+}
+
+User <|-- Student
+User <|-- Teacher
+User <|-- Admin
+
+Student "1" -- "n" Course
+Teacher "1" -- "n" Course
+
+Course "1" -- "n" Material
+Course "1" -- "n" Assignment
+Course "1" -- "n" Test
+
+User "1" -- "n" Message
+
+Admin "1" -- "n" User
+Admin "1" -- "n" Course
+Admin "1" -- "n" Material
+Admin "1" -- "n" TechnicalIssue
+
+@enduml

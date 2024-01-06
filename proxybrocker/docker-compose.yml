@@ -1,0 +1,12 @@
+version: '3'
+services:
+  proxybroker:
+    image: bluet/proxybroker2
+    ports:
+      - 8888:8888
+    volumes:
+      - ./data:/data
+    #command: grab --countries US --limit 10 --outfile /data/proxies.txt
+    command: find --types HTTPS --lvl High --countries US --strict -l 10
+    #command: serve --types HTTP HTTPS
+    #command: serve rest_api --host 0.0.0.0 --port 8888 --types HTTP HTTPS --lvl High --countries US --strict -l 10
