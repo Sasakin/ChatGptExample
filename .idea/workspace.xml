@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fc5d3347-5f94-4329-ad68-1d44c8cc7b43" name="Changes" comment="init">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/templateLanguages.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/npm/public/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/npm/_notifier.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/npm/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/npm/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/npm/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/npm/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/npm/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/npm/style.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/npm/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/npm/views/index.ejs" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="HTTP Request" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBowerSettings">
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2aOe5EJRPJXaRgw8VqVh2tBBRKb" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.JavaCodeGenerator.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.OpenAiServiceMAin.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ProxyParser.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.npm.app: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.npm/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.npm: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.proxybrocker.proxybroker: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.proxybrocker: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.proxy | #1.executor&quot;: &quot;Run&quot;,
+    &quot;Node.js.index.js.executor&quot;: &quot;Debug&quot;,
+    &quot;Node.js.package.json.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;credentialsType com.jetbrains.nodejs.remote.NodeJSCreateRemoteSdkForm&quot;: &quot;Docker Compose&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sasakinme/IdeaProjects/other/edu/npm/docker-compose.yml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_interpreter_path&quot;: &quot;docker-compose://[C:/Users/sasakinme/IdeaProjects/other/edu/npm/docker-compose.yml]:app/node&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.41307577&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.nodejs&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sasakinme\IdeaProjects\other\edu\npm" />
+      <recent name="C:\Users\sasakinme\IdeaProjects\other\edu\view\plotly" />
+      <recent name="C:\Users\sasakinme\IdeaProjects\other\edu\jCodeGen" />
+      <recent name="C:\Users\sasakinme\IdeaProjects\other\edu\documentation" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sasakinme\IdeaProjects\other\edu\npm\public" />
+      <recent name="C:\Users\sasakinme\IdeaProjects\other\edu\npm\chart-example" />
+      <recent name="C:\Users\sasakinme\IdeaProjects\other\edu\npm" />
+      <recent name="C:\Users\sasakinme\IdeaProjects\other\edu\npm\chart-example\view" />
+      <recent name="C:\Users\sasakinme\IdeaProjects\other\edu\npm\test1" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Node.js.index.js">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.charot.edu.platform.Main" />
+      <module name="edu" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.charot.edu.platform.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="proxy | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/proxybrocker/proxy.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.js" type="NodeJSConfigurationType" path-to-node="docker-compose://[$PROJECT_DIR$/npm/docker-compose.yml]:app/node" nameIsGenerated="true" path-to-js-file="index.js" working-dir="$PROJECT_DIR$/npm">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="npm: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="sourceFilePath" value="npm/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="npm/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="containerName" value="" />
+          <option name="sourceFilePath" value="npm/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="npm.app: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="services">
+            <list>
+              <option value="app" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="npm/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Docker.npm.app: Compose Deployment" />
+      <item itemvalue="Docker.npm/Dockerfile" />
+      <item itemvalue="Docker.npm: Compose Deployment" />
+      <item itemvalue="HTTP Request.proxy | #1" />
+      <item itemvalue="Node.js.index.js" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.npm.app: Compose Deployment" />
+        <item itemvalue="Docker.npm: Compose Deployment" />
+        <item itemvalue="Docker.npm/Dockerfile" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="HTTP Request.proxy | #1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-17.0.9-corretto-17.0.9-f644763e9732-ebaef533" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fc5d3347-5f94-4329-ad68-1d44c8cc7b43" name="Changes" comment="" />
+      <created>1704193874144</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1704193874144</updated>
+      <workItem from="1704193875290" duration="10042000" />
+      <workItem from="1704229582174" duration="3699000" />
+      <workItem from="1704268804880" duration="9354000" />
+      <workItem from="1704375428695" duration="9380000" />
+      <workItem from="1704453656084" duration="27541000" />
+      <workItem from="1704535241635" duration="10232000" />
+    </task>
+    <task id="LOCAL-00001" summary="init">
+      <option name="closed" value="true" />
+      <created>1704540875198</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1704540875198</updated>
+    </task>
+    <task id="LOCAL-00002" summary="init">
+      <option name="closed" value="true" />
+      <created>1704556066472</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1704556066472</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/charot/edu/platform/JavaCodeGenerator.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.jdks/corretto-17.0.9/lib/src.zip!/java.base/sun/nio/fs/WindowsException.java</url>
+          <line>83</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/charot/edu/platform/proxy/ProxyParser.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+  <component name="com.github.evgenys91.machinet.common.dslhistory.DslHistoryState">
+    <option name="historyDtoById">
+      <map>
+        <entry key="c40979">
+          <value>
+            <ChatHistoryModel>
+              <option name="id" value="c40979" />
+              <option name="initiateTms" value="1704478711327" />
+              <option name="isStopped" value="true" />
+              <option name="request" value="подскажи как отобразить график на в ответе от сервера nodejs" />
+              <option name="response" value="" />
+              <option name="usedLocalFilePaths">
+                <list>
+                  <option value="$PROJECT_DIR$/npm/index.js" />
+                </list>
+              </option>
+            </ChatHistoryModel>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

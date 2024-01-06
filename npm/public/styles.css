@@ -1,0 +1,113 @@
+/* Общие стили */
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Стили для шапки */
+header {
+    background-color: #333;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #f5f5f5;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    margin-right: 10px;
+    color: #f5f5f5;
+}
+
+/* Стили для основного содержимого */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+p {
+    margin-top: 0;
+    line-height: 1.5;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+th {
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+/* Стили для калькулятора */
+form {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 5px;
+}
+
+button[type="submit"] {
+    padding: 5px 10px;
+    background-color: #333;
+    color: #f5f5f5;
+    border: none;
+    cursor: pointer;
+}
+
+#result {
+    font-weight: bold;
+}
+
+/* Стили для подвала */
+footer {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    color: #f5f5f5;
+}
+
+footer p {
+    margin: 0;
+}
