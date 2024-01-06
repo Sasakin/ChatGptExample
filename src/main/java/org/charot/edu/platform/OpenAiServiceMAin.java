@@ -16,7 +16,7 @@ import static com.theokanning.openai.service.OpenAiService.*;
 
 public class OpenAiServiceMAin {
     public static void main(String[] args) {
-        String token = "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";
+        String token = "sk-1231313131";
         Duration timeout = Duration.ofMillis(100000);
         /*OpenAiService service = new OpenAiService(token);
         CompletionRequest completionRequest = CompletionRequest.builder()

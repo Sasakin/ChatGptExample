@@ -14,7 +14,7 @@ import static com.theokanning.openai.service.OpenAiService.defaultObjectMapper;
 public class Main {
     public static String chatGPT(String prompt) {
         String url = "https://api.openai.com/v1/chat/completions";
-        String apiKey = "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";
+        String apiKey = "sk-1231231231312313";
         String model = "gpt-3.5-turbo";
 
         try {
@@ -85,7 +85,7 @@ public class Main {
 
             // Установите заголовок Authorization с вашим API-ключом GPT-3
             connection.setRequestProperty("Authorization",
-                    "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");
+                    "sk-1231231231231");
 
             // Включите вывод данных в тело запроса
             connection.setDoOutput(true);
