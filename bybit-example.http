@@ -1,0 +1,6 @@
+#GET /v5/market/kline?symbol=SRMUSDT&interval=D&limit=200 HTTP/1.1
+#Host: api.bybit.com
+
+
+GET /v5/market/instruments-info?category=spot
+Host: api.bybit.com

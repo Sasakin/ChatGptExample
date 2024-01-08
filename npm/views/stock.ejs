@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>Stock Market Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stock.css">
+  </head>
+  <body>
+  <div class="panels">
+    <ul class="left-panel">
+      <h3>Stock Market Quotes</h3>
+      <ul class="stock-quotes">
+      </ul>
+    </ul>
+    <div class="right-panel">
+      <div class="top-panel">
+        <h2>Stock Price Chart</h2>
+        <div id="chart"></div>
+      </div>
+      <div class="bottom-panel">
+        <h2>Python Script Results</h2>
+        <p id="script-output"></p>
+      </div>
+    </div>
+  </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      // Call API to get stock quotes and display them in the left panel
+      $.ajax({
+        url: "https://api.bybit.com/v5/market/instruments-info?category=spot",
+        success: function(data) {
+          var quotes = data.result.list; // Предположим, что данные содержат массив объектов с информацией о котировках
+
+          var ul = $("<ul></ul>"); // Создаем элемент <ul>
+
+          quotes.forEach(function(quote) {
+            var li = $("<li></li>").text(quote.symbol); // Создаем элемент <li> и добавляем текст котировки
+            ul.append(li); // Добавляем элемент <li> в элемент <ul>
+          });
+
+          $(".stock-quotes").append(ul); // Добавляем элемент <ul> в контейнер .stock-quotes
+        }
+      });
+
+      // Call Python script to generate chart and display it in the top panel
+      $(".left-panel ul").on("click", "li", function() {
+        var symbol = $(this).text();
+        $.ajax({
+          url: "/generate-chart",
+          data: { symbol: symbol },
+          success: function(data) {
+            // Display chart in the top panel
+          }
+        });
+      });
+
+      // Call Python script and display output in the bottom panel
+      $.ajax({
+        url: "/run-script",
+        success: function(data) {
+          $("#script-output").text(data);
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -51,6 +51,10 @@ app.get('/chat', (req, res) => {
     res.render('chat'); // отображение страницы chat.ejs
 });
 
+app.get('/stock', (req, res) => {
+    res.render('stock'); // отображение страницы stock.ejs
+});
+
 app.use((req, res) => {
     res.status(404).send('404 Not Found');
 });

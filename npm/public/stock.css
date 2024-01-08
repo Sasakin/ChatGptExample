@@ -1,0 +1,78 @@
+.panels {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.right-panel {
+    width: 100%;
+}
+/* Стили для скрытого скроллбара */
+.left-panel {
+    flex-grow: 1;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    height: 100%;
+/*    width: 300px;
+    overflow-y: scroll;*/
+    width: 25%;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.left-panel::-webkit-scrollbar {
+    width: 8px;
+}
+
+.left-panel::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.left-panel::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.left-panel .stock-quotes {
+    counter-reset: li;
+    list-style: none;
+    font: 14px "Trebuchet MS", "Lucida Sans";
+    padding: 0;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+}
+
+.left-panel .stock-quotes li {
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    margin: .5em 0;
+    background: #DAD2CA;
+    color: #444;
+    text-decoration: none;
+    border-radius: .3em;
+    transition: .3s ease-out;
+    cursor: pointer;
+}
+
+.left-panel .stock-quotes li:hover {
+    background: #E9E4E0;
+}
+
+.left-panel .stock-quotes li:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: #8FD4C1;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid white;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
+}
