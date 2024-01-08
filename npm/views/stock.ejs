@@ -25,13 +25,12 @@
   </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-      // Call API to get stock quotes and display them in the left panel
       $.ajax({
         url: "https://api.bybit.com/v5/market/instruments-info?category=spot",
         success: function(data) {
-          var quotes = data.result.list; // Предположим, что данные содержат массив объектов с информацией о котировках
+          var quotes = data.result.list; // массив котировок
 
-          var ul = $("<ul></ul>"); // Создаем элемент <ul>
+          var ul = $("<ul></ul>");
 
           quotes.forEach(function(quote) {
             var li = $("<li></li>").text(quote.symbol); // Создаем элемент <li> и добавляем текст котировки
@@ -48,8 +47,9 @@
         $.ajax({
           url: "/generate-chart",
           data: { symbol: symbol },
-          success: function(data) {
+          success: function(img_base64) {
             // Display chart in the top panel
+            $(".top-panel").html(`<img src="data:image/png;base64,${img_base64}"/>`);
           }
         });
       });

@@ -2,9 +2,9 @@
   "name": "my-project",
   "version": "1.0.0",
   "description": "Описание вашего проекта",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "express": "^4.17.1",
@@ -15,6 +15,11 @@
     "decimal.js": "",
     "really-relaxed-json": "",
     "path": "",
-    "child_process": ""
+    "child_process": "",
+    "matplotlib": "",
+    "base64-stream": "",
+    "ndarray": "",
+    "ndarray-ops": "",
+    "ndarray-linspace": ""
   }
 }

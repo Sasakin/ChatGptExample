@@ -1,16 +1,4 @@
-const axios  = require('axios');
-const express = require('express');
-const app = express();
-/*const { createCanvas } = require('canvas');*/
-const Chart = require('chart.js');
-const Decimal = require('decimal.js');
-const parser = require('really-relaxed-json').createParser();
-const path = require('path');
-
-const ejs = require('ejs');
-app.set('view engine', 'ejs');
-app.set('views', __dirname + '/views');
-app.use(express.static(path.join(__dirname, 'public')));
+const axios = require("axios");
 
 async function getData(res) {
     try {
@@ -42,23 +30,6 @@ async function getData(res) {
     }
 }
 
-app.get('/', async (req, res) => {
-    getData(res);
-});
-
-// Обработка GET-запроса на страницу чата
-app.get('/chat', (req, res) => {
-    res.render('chat'); // отображение страницы chat.ejs
-});
-
-app.get('/stock', (req, res) => {
-    res.render('stock'); // отображение страницы stock.ejs
-});
-
-app.use((req, res) => {
-    res.status(404).send('404 Not Found');
-});
-
-app.listen(3000, () => {
-    console.log('Сервер запущен на порту 3000');
-});
+module.exports = {
+    getData
+};
