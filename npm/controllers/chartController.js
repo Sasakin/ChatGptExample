@@ -4,7 +4,7 @@ function generateChart(req, res) {
     const symbol = req.query.symbol;
 
     // Запуск Python-скрипта
-    const python = spawn('python3', ['python/generate_chart.py', symbol]);
+    const python = spawn('python3', ['python/symbolChart.py', symbol]);
 
     // Получение вывода из Python-скрипта
     let img_base64 = '';

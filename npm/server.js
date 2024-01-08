@@ -1,8 +1,6 @@
-const axios  = require('axios');
 const express = require('express');
 const app = express();
 const path = require('path');
-const { spawn } = require('child_process');
 const chartController = require('./controllers/chartController');
 const { getData} = require('./utils/chartUtils');
 const { aptGetUpdate, installPython} = require('./utils/pythonUtils');
@@ -12,7 +10,7 @@ app.set('views', __dirname + '/views');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', async (req, res) => {
-    getData(res);
+    await getData(res);
 });
 
 // Обработка GET-запроса на страницу чата
@@ -21,7 +19,7 @@ app.get('/chat', (req, res) => {
 });
 
 app.get('/stock', (req, res) => {
-    res.render('stock'); // отображение страницы stock.ejs
+    res.render('stock');
 });
 
 app.get('/generate-chart', chartController.generateChart);

@@ -127,4 +127,5 @@ def matplotPlot():
    fig = m.plot_components(forecast)
    plt.show()
 
-prophetPlot()
+matplotPlot()
+#prophetPlot()

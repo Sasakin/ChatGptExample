@@ -24,9 +24,18 @@ function aptGetUpdate() {
     });
 }
 
-function installPython() {
+async function installPython() {
+    console.log('install pipx completed successfully');
+    installLibProphet()
+    await installLib('python3-pandas')
+    await installLib('python3-numpy')
+    await installLib('python3-requests')
+    await installLib('python3-matplotlib')
+}
+
+function installLibProphet() {
     // Запуск команды установки Python
-    const installPython = spawn('apt', ['install', '-y', 'python3-matplotlib']);
+    const installPython = spawn('python3', ['-m', 'pip', 'install', 'prophet', '--break-system-packages']);
 
     // Обработка событий вывода данных
     installPython.stdout.on('data', (data) => {
@@ -41,6 +50,34 @@ function installPython() {
     // Обработка события завершения команды
     installPython.on('close', (code) => {
         console.log(`Child process exited with code ${code}`);
+    });
+}
+
+
+async function installLib(lib) {
+    return new Promise((resolve, reject) => {
+        // Запуск команды установки Python
+        const installPython = spawn('apt', ['install', '-y', lib]);
+
+        // Обработка событий вывода данных
+        installPython.stdout.on('data', (data) => {
+            console.log(`stdout: ${data}`);
+        });
+
+        // Обработка событий вывода ошибок
+        installPython.stderr.on('data', (data) => {
+            console.error(`stderr: ${data} lib: ${lib}`);
+        });
+
+        // Обработка события завершения команды
+        installPython.on('close', (code) => {
+            console.log(`Child process exited with code ${code}`);
+            if (code === 0) {
+                resolve();
+            } else {
+                reject(new Error(`Child process exited with code ${code}`));
+            }
+        });
     });
 }
 
